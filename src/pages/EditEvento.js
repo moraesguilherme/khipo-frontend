@@ -11,7 +11,7 @@ const EditEvento = () => {
   const [localId, setLocalId] = useState('');
   const [locais, setLocais] = useState([]);
   const { id } = useParams();
-  const navigate = useNavigate(); // Alterado para useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchEvento();
@@ -46,7 +46,7 @@ const EditEvento = () => {
     const updatedEvento = { nome, tipo, data, horario, localId };
     try {
       await updateEvento(id, updatedEvento);
-      navigate('/eventos'); // Alterado para navigate
+      navigate('/eventos');
     } catch (error) {
       console.error(error);
     }

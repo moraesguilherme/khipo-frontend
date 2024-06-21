@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Alterado para useNavigate
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { addEvento, getLocais } from '../services/api'; // Certifique-se de importar corretamente
+import { addEvento, getLocais } from '../services/api';
 
 const AddEvento = () => {
   const [nome, setNome] = useState('');
@@ -10,7 +10,7 @@ const AddEvento = () => {
   const [horario, setHorario] = useState('');
   const [localId, setLocalId] = useState('');
   const [locais, setLocais] = useState([]);
-  const navigate = useNavigate(); // Alterado para useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchLocais();
@@ -30,7 +30,7 @@ const AddEvento = () => {
     const newEvento = { nome, tipo, data, horario, localId };
     try {
       await addEvento(newEvento);
-      navigate('/eventos'); // Alterado para navigate
+      navigate('/eventos');
     } catch (error) {
       console.error(error);
     }

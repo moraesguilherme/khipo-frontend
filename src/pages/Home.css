@@ -1,0 +1,137 @@
+.home-container {
+    padding: 32px;
+    background-color: #10141D;
+    color: #EBF0F9;
+    min-height: 100vh;
+  }
+  
+  .greeting-section {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  
+  .greeting-section h2 {
+    font-size: 48px;
+    margin-bottom: 8px;
+  }
+  
+  .greeting-section p {
+    font-size: 24px;
+    color: #BABBBF;
+  }
+  
+  .buttons-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  
+  .button-local, .button-evento {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+  }
+  
+  .button-evento {
+    background-color: #461527;
+  }
+
+  .button-local {
+    background-color: #2F3B28;
+  }
+  
+  .icon {
+    font-size: 50px;
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .button-content {
+    flex-grow: 1;
+  }
+  
+  .button-local button, .button-evento button {
+    background-color: #fff;
+    color: #2F3B28;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .lists-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .list-locais, .list-eventos {
+    width: 45%;
+  }
+  
+  .list-locais ul, .list-eventos ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-locais li, .list-eventos li {
+    background-color: #10141D;
+    color: #EBF0F9;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .view-all {
+    color: #F79E1B;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: right;
+    display: block;
+    margin-top: 8px;
+  }
+  
+  .section-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .section-content .card-wrapper {
+    background: #10141D;
+    padding: 16px;
+    border-radius: 8px;
+    color: #EBF0F9;
+    width: 100%;
+    margin: 8px 0;
+  }
+  
+  .section-content h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .section-content p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #BABBBF;
+  }
+  
+  .section-content .tag {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-right: 8px;
+  }  
