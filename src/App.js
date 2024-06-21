@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Locais from './pages/Locais';
+import AddLocal from './pages/AddLocal';
+import EditLocal from './pages/EditLocal';
+import Eventos from './pages/Eventos';
+import AddEvento from './pages/AddEvento';
+import EditEvento from './pages/EditEvento';
+import GlobalStyles from './styles/GlobalStyles';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyles />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/locais" element={<Locais />} />
+        <Route path="/add-local" element={<AddLocal />} />
+        <Route path="/edit-local/:id" element={<EditLocal />} />
+        <Route path="/eventos" element={<Eventos />} />
+        <Route path="/add-evento" element={<AddEvento />} />
+        <Route path="/edit-evento/:id" element={<EditEvento />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
