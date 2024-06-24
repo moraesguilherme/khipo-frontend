@@ -1,31 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CardWrapper = styled.div`
+const TableWrapper = styled.div`
   background: #161B22;
   padding: 16px;
   border-radius: 8px;
-  margin: 8px 0;
+  margin: 0px 0;
   color: #EBF0F9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
-const CardText = styled.div`
-  display: flex;
-  flex-direction: column;
+const Table = styled.div`
+  display: table;
+  width: 100%;
 `;
 
-const CardTitle = styled.h4`
-  margin: 0;
-  font-size: 16px;
+const TableRow = styled.div`
+  display: table-row;
+  background-color: ${props => props.index % 2 === 0 ? '#1B1F24' : '#161B22'};
 `;
 
-const CardInfo = styled.p`
-  margin: 4px 0;
-  font-size: 14px;
-  color: #BABBBF;
+const TableCell = styled.div`
+  display: table-cell;
+  padding: 8px;
 `;
 
 const Tag = styled.span`
@@ -38,19 +34,21 @@ const Tag = styled.span`
   margin-right: 8px;
 `;
 
-const EventoCard = ({ evento }) => (
-  <CardWrapper>
-    <CardText>
-      <CardTitle>{evento.nome}</CardTitle>
-      <CardInfo>
-        <Tag color={evento.tipo === 'Futebol' ? '#3A7D44' : '#FFB347'}>
-          {evento.tipo}
-        </Tag>
-        {evento.local}
-      </CardInfo>
-    </CardText>
-    {/* <MoreOptionsIcon /> */}
-  </CardWrapper>
+const EventoCard = ({ evento, index }) => (
+  <TableWrapper>
+    <Table>
+      <TableRow index={index}>
+        <TableCell>{evento.nome}</TableCell>
+        <TableCell>
+          <Tag color={evento.tipo === 'Futebol' ? '#3A7D44' : '#FFB347'}>
+            {evento.tipo}
+          </Tag>
+          {evento.local.nome}
+        </TableCell>
+        <TableCell>{new Date(evento.data).toLocaleDateString()}</TableCell>
+      </TableRow>
+    </Table>
+  </TableWrapper>
 );
 
 export default EventoCard;

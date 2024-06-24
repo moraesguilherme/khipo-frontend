@@ -9,6 +9,7 @@ import Eventos from './pages/Eventos';
 import AddEvento from './pages/AddEvento';
 import EditEvento from './pages/EditEvento';
 import GlobalStyles from './styles/GlobalStyles';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (

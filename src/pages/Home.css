@@ -23,7 +23,7 @@
   .buttons-section {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 10px;
   }
   
   .button-local, .button-evento {
@@ -31,8 +31,9 @@
     align-items: center;
     color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    width: 45%;
+    border-radius: 15px;
+    width: 49%;
+    height: 110px;
   }
   
   .button-evento {
@@ -44,15 +45,18 @@
   }
   
   .icon {
-    font-size: 50px;
     color: #fff;
-    margin-right: 20px;
+    margin-right: 5px;
   }
   
   .button-content {
     flex-grow: 1;
   }
   
+  .custom-button {
+    height: 40px;
+  }
+
   .button-local button, .button-evento button {
     background-color: #fff;
     color: #2F3B28;
@@ -60,6 +64,10 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 16px; 
   }
   
   .lists-section {
@@ -69,7 +77,7 @@
   }
   
   .list-locais, .list-eventos {
-    width: 45%;
+    width: 48%;
   }
   
   .list-locais ul, .list-eventos ul {

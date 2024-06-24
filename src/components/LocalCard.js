@@ -1,42 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Table } from 'react-bootstrap';
 
-const CardWrapper = styled.div`
-  background: #161B22;
-  padding: 16px;
-  border-radius: 8px;
-  margin: 8px 0;
-  color: #EBF0F9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+const TableRow = styled.div`
+  display: table-row;
+  background-color: ${props => props.index % 2 === 0 ? '#6A5ACD' : '#1B1F24'};
 `;
 
-const CardText = styled.div`
-  display: flex;
-  flex-direction: column;
+const TableCell = styled.div`
+  display: table-cell;
+  padding: 8px;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: wrap;
 `;
 
-const CardTitle = styled.h4`
-  margin: 0;
-  font-size: 16px;
-`;
-
-const CardInfo = styled.p`
-  margin: 4px 0;
-  font-size: 14px;
-  color: #BABBBF;
-`;
-
-const LocalCard = ({ local }) => (
-  <CardWrapper>
-    <CardText>
-      <CardTitle>{local.nome}</CardTitle>
-      <CardInfo>{local.endereco}</CardInfo>
-      <CardInfo>{local.email}</CardInfo>
-    </CardText>
-    {/* <MoreOptionsIcon /> */}
-  </CardWrapper>
+const LocalCard = ({ local, index }) => (
+    <Table>
+      <TableRow index={index}>
+        <TableCell>{local.nome}</TableCell>
+        <TableCell>{local.endereco.enderecoCompleto}</TableCell>
+        <TableCell>{local.emailContato}</TableCell>
+      </TableRow>
+    </Table>
 );
 
 export default LocalCard;

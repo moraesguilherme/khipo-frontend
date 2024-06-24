@@ -1,9 +1,9 @@
 .section-wrapper {
     margin: 16px 0;
-    background: #161B22;
+    background: #10141d;
     border-radius: 8px;
     padding: 16px;
-    width: 45%;
+    width: 49%;
   }
   
   .section-header {
@@ -20,7 +20,6 @@
   }
   
   .section-link {
-    color: #F79E1B;
+    color: blue;
     text-decoration: none;
   }
-  

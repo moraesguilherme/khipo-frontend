@@ -29,7 +29,7 @@ const AddEvento = () => {
     e.preventDefault();
     const newEvento = { nome, tipo, data, horario, localId };
     try {
-      await addEvento(newEvento);
+    //   await addEvento(newEvento);
       navigate('/eventos');
     } catch (error) {
       console.error(error);

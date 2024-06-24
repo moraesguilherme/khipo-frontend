@@ -1,0 +1,161 @@
+.locais-container {
+    background-color: #10141D;
+    color: #EBF0F9;
+    min-height: 100vh;
+    max-width: 1224px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 16px 32px;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #BABBBF;
+  }
+  
+  .breadcrumb a {
+    color: #EBF0F9;
+    text-decoration: none;
+  }
+  
+  .breadcrumb span {
+    color: #F79E1B;
+  }
+  
+  .locais-container h2 {
+    font-size: 36px;
+  }
+  
+  .locais-container p {
+    font-size: 18px;
+    color: #BABBBF;
+  }
+  
+  .content-wrapper {
+    background-color: #000000;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .search-add-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+  }
+  
+  .search-input-container {
+    position: relative;
+    width: 70%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #7A7F8D;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 8px 8px 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: #1B1F24;
+    color: #EBF0F9;
+  }
+  
+  .add-button {
+    background-color: #EBF0F9;
+    color: #10141D;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  
+  th {
+    background-color: #1B1F24;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #161B22;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .pagination button {
+    background-color: #1B1F24;
+    color: #EBF0F9;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+  }
+  
+  .actions-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .actions-icon {
+    cursor: pointer;
+    color: #7A7F8D;
+  }
+  
+  .actions-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1B1F24;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(19, 17, 17, 0.2);
+    z-index: 1;
+    right: 0;
+  }
+  
+  .actions-menu .actions-dropdown {
+    display: block;
+  }
+  
+  .actions-dropdown button {
+    color: #EBF0F9;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .actions-dropdown button:hover {
+    background-color: #333;
+  }  

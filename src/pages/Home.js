@@ -7,6 +7,7 @@ import Section from '../components/Section';
 import './Home.css';
 import { Button } from '@material-ui/core';
 import { Room as RoomIcon, Event as EventIcon } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [locais, setLocais] = useState([]);
@@ -45,31 +46,31 @@ const Home = () => {
         </div>
         <div className="buttons-section">
           <div className="button-local">
-            <RoomIcon className="icon" />
             <div className="button-content">
-              <h3>Locais</h3>
+              <h2><RoomIcon className="icon" /><span>Locais</span></h2>
               <p>Confira todos os locais cadastrados!</p>
             </div>
-            <Button variant="contained" color="primary">Conferir locais</Button>
+            <Link to="/locais">
+                <Button className="custom-button" variant="contained">Conferir locais</Button>
+            </Link>
           </div>
           <div className="button-evento">
-            <EventIcon className="icon" />
             <div className="button-content">
-              <h3>Eventos</h3>
+              <h2><EventIcon className="icon" /><span>Eventos</span></h2>
               <p>Confira todos os eventos cadastrados!</p>
             </div>
-            <Button variant="contained" color="primary">Conferir eventos</Button>
+            <Button className="custom-button" variant="contained">Conferir eventos</Button>
           </div>
         </div>
         <div className="section-content">
-          <Section title="Últimos locais adicionados" linkText="Ver todos" linkHref="#">
+          <Section title="Últimos locais adicionados" linkText="Ver todos" linkHref="/locais">
             <div className="card-container">
               {locais.map(local => (
                 <LocalCard key={local.id} local={local} />
               ))}
             </div>
           </Section>
-          <Section title="Últimos eventos adicionados" linkText="Ver todos" linkHref="#">
+          <Section title="Últimos eventos adicionados" linkText="Ver todos" linkHref="/eventos">
             <div className="card-container">
               {eventos.map(evento => (
                 <EventoCard key={evento.id} evento={evento} />

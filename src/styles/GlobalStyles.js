@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #FCFCFC;
+    background-color: #10141D;
     color: #333B49;
   }
 
@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
     padding: 16px 32px;
     background-color: #333B49;
     color: #EBF0F9;
+    max-width: 1224px;
+    margin: 0 auto;
   }
 
   .header .logo a {
@@ -48,6 +50,9 @@ const GlobalStyles = createGlobalStyle`
 
   .home-container {
     padding: 32px;
+    max-width: 1224px;
+    margin: 0 auto;
+    background-color: #161B22;
   }
 
   .intro h2 {
