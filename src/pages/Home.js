@@ -21,18 +21,28 @@ const Home = () => {
   const fetchLocais = async () => {
     try {
       const response = await getLocais();
-      setLocais(response.data);
+      if (Array.isArray(response.data)) {
+        setLocais(response.data);
+      } else {
+        setLocais([]);
+      }
     } catch (error) {
       console.error(error);
+      setLocais([]);
     }
   };
 
   const fetchEventos = async () => {
     try {
       const response = await getEventos();
-      setEventos(response.data);
+      if (Array.isArray(response.data)) {
+        setEventos(response.data);
+      } else {
+        setEventos([]);
+      }
     } catch (error) {
       console.error(error);
+      setEventos([]);
     }
   };
 
@@ -51,7 +61,7 @@ const Home = () => {
               <p>Confira todos os locais cadastrados!</p>
             </div>
             <Link to="/locais">
-                <Button className="custom-button" variant="contained">Conferir locais</Button>
+              <Button className="custom-button" variant="contained">Conferir locais</Button>
             </Link>
           </div>
           <div className="button-evento">
@@ -59,20 +69,22 @@ const Home = () => {
               <h2><EventIcon className="icon" /><span>Eventos</span></h2>
               <p>Confira todos os eventos cadastrados!</p>
             </div>
-            <Button className="custom-button" variant="contained">Conferir eventos</Button>
+            <Link to="/eventos">
+              <Button className="custom-button" variant="contained">Conferir eventos</Button>
+            </Link>
           </div>
         </div>
         <div className="section-content">
           <Section title="Últimos locais adicionados" linkText="Ver todos" linkHref="/locais">
             <div className="card-container">
-              {locais.map(local => (
+              {Array.isArray(locais) && locais.map(local => (
                 <LocalCard key={local.id} local={local} />
               ))}
             </div>
           </Section>
           <Section title="Últimos eventos adicionados" linkText="Ver todos" linkHref="/eventos">
             <div className="card-container">
-              {eventos.map(evento => (
+              {Array.isArray(eventos) && eventos.map(evento => (
                 <EventoCard key={evento.id} evento={evento} />
               ))}
             </div>

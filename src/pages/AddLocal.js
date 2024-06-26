@@ -34,6 +34,7 @@ const AddLocal = () => {
     };
     try {
       await addLocal(novoLocal);
+      localStorage.setItem('notification', JSON.stringify({ message: 'Um novo local foi adicionado', type: 'success' }));
       navigate('/locais');
     } catch (error) {
       console.error(error);
